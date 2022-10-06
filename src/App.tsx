@@ -1,4 +1,5 @@
 import { Canvas } from '@react-three/fiber'
+import {OrbitControls} from '@react-three/drei'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import { ThreeDBox } from './components/Box'
@@ -7,6 +8,7 @@ function App() {
   return (
     <Canvas>
         <ambientLight />
+        <OrbitControls/>
         <pointLight position={[10, 10, 10]} />
         <ThreeDBox position={[0,0,0]} />
     </Canvas>

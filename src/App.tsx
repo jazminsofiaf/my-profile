@@ -2,15 +2,17 @@ import { Canvas } from '@react-three/fiber'
 import {OrbitControls} from '@react-three/drei'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import { ThreeDBox } from './components/Box'
+import { ThreeDTextBox } from './components/TextBox'
 
 function App() {
   return (
     <Canvas>
         <ambientLight />
-        <OrbitControls/>
         <spotLight position={[10, 15, 12]} angle={0.7} />
-        <ThreeDBox position={[0,0,0]} />
+        <ThreeDTextBox position={[0,0,0]}>
+          LA CAJA CON TEXTO: aca esta el cuerpo del texto que no es muy extenso tampoco porque se trata de una descripcion
+          hecha por mi para ver como queda esta letra en el cubo.
+        </ThreeDTextBox>
     </Canvas>
   )
 }

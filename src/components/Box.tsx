@@ -10,11 +10,11 @@ export function ThreeDBox(props: JSX.IntrinsicElements['mesh']) {
           <mesh
             {...props}
             ref={mesh}
-            scale={active ? 2.5 : 2}
+            rotation={[0,1,1]}
             onClick={(event) => setActive(!active)}
             onPointerOver={(event) => setHover(true)}
             onPointerOut={(event) => setHover(false)}>
-            <boxGeometry args={[2, 2, 2]} />
+            <boxGeometry args={[3.5, 3.5, 3.5  ]}  />
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
           </mesh>
         )

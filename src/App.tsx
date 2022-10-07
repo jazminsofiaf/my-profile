@@ -9,7 +9,7 @@ function App() {
     <Canvas>
         <ambientLight />
         <OrbitControls/>
-        <pointLight position={[10, 10, 10]} />
+        <spotLight position={[10, 15, 12]} angle={0.7} />
         <ThreeDBox position={[0,0,0]} />
     </Canvas>
   )

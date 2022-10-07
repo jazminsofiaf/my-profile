@@ -17,7 +17,8 @@
     "react-spring": "^9.4.5",
     "styled-components": "^5.3.5",
     "three": "^0.142.0",
-    "wouter": "^2.8.0-alpha.2"
+    "wouter": "^2.8.0-alpha.2",
+    "react-scroll-percentage": "4.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

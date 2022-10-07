@@ -2,10 +2,15 @@ import * as THREE from 'three'
 import { useRef, useMemo } from 'react'
 import { createPortal, useFrame } from "@react-three/fiber"
 import { Text, Shadow, OrthographicCamera } from "@react-three/drei"
+import { useScrollPercentage } from "react-scroll-percentage";
 
 export function ThreeDTextBox({ children } :any, props: JSX.IntrinsicElements['mesh'], ) {
   const cam = useRef<THREE.Camera>(null!)
   const mesh = useRef<THREE.Mesh>(null!)
+
+  const [ref, percentage] = useScrollPercentage({
+    threshold: 0
+  });
 
   const [scene, target] = useMemo(() => {
     const scene = new THREE.Scene()
@@ -45,7 +50,7 @@ export function ThreeDTextBox({ children } :any, props: JSX.IntrinsicElements['m
       )}
       <mesh 
         {...props}
-        rotation={[0,1,1]}
+        rotation={[0 ,1,1]}
         ref={mesh}>
         <boxGeometry attach="geometry" args={[3.5, 3.5, 3.5  ]}  />
         <meshStandardMaterial attach="material" map={target.texture} />
